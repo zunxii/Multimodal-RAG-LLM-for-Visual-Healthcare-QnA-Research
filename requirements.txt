@@ -1,5 +1,11 @@
-flask
-pandas
-numpy
-faiss-cpu
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
 google-generativeai
+torch
+transformers
+Pillow
+sentence-transformers
+faiss-cpu
+numpy
