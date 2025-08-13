@@ -71,7 +71,3 @@ medical-symptom-analyzer/
 
 - Python 3.9+
 - Google AI Studio API key
-
-## ⚠️ Disclaimer
-
-This is an AI-generated analysis for educational purposes only. Not a substitute for professional medical advice. Always consult qualified healthcare providers for health concerns.
