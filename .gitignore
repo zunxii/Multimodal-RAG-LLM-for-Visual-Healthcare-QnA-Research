@@ -21,23 +21,15 @@ env/
 Thumbs.db
 
 # === Logs and outputs ===
-*.log
-logs/
-output/
-tmp/
-*.tmp
+
 
 # === Jupyter notebooks checkpoints ===
 .ipynb_checkpoints/
 
-# === Data files (keep only if lightweight) ===
-data/*.csv
-data/*.pdf
-data/images/
-data/captions/
+
 
 # === Model weights / checkpoints ===
-models/
+
 checkpoints/
 *.h5
 *.pt
