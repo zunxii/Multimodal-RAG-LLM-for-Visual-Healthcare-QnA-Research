@@ -1,16 +1,15 @@
 import logging
-import os
 
-def get_logger(name="app"):
+def get_logger(name="multimodal_rag"):
+    """Create and configure logger"""
     logger = logging.getLogger(name)
     if not logger.handlers:
         handler = logging.StreamHandler()
-        formatter = logging.Formatter("[%(levelname)s] %(asctime)s — %(message)s")
+        formatter = logging.Formatter(
+            "[%(levelname)s] %(asctime)s — %(name)s — %(message)s",
+            datefmt="%Y-%m-%d %H:%M:%S"
+        )
         handler.setFormatter(formatter)
         logger.addHandler(handler)
         logger.setLevel(logging.INFO)
     return logger
-
-if __name__ == "__main__":
-    log = get_logger()
-    log.info("Logger initialized successfully.")

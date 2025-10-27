@@ -1,67 +1,98 @@
-import os
 import json
-import torch
-import numpy as np
-from tqdm import tqdm
 from pathlib import Path
-from sentence_transformers import SentenceTransformer
+from typing import List, Dict, Any
+from tqdm import tqdm
 
-from prompt_bank import PromptBank
-# from vlm_adapters.llava_med_adapter import LLaVAMedAdapter
-from vlm_adapters.gpt4v_adapter import GPT4VAdapter
-# from vlm_adapters.medflamingo_adapter import MedFlamingoAdapter
-from vlm_adapters.gemini_adapter import GeminiAdapter
+from .prompt_bank import PromptBank
+from .vlm_adapters import GPT4VAdapter, GeminiAdapter
+from ..utils import get_logger
+
+logger = get_logger(__name__)
+
 
 class DynamicCaptionCloud:
     """
     Builds dynamic caption cloud C(I)^dyn by sampling across
-    multiple VLMs, prompts, and random seeds.
+    multiple VLMs (M), prompts (Π), and random seeds (S).
+    
+    Implements Algorithm 1 lines 3-11 from the paper.
     """
 
-    def __init__(self, output_dir="data/captions", embed_model="all-MiniLM-L6-v2"):
+    def __init__(self, output_dir: str = "data/captions"):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.prompt_bank = PromptBank()
+        
+        # Initialize VLM ensemble M = {M1, M2, ...}
         self.models = [
-            # LLaVAMedAdapter(),
             GPT4VAdapter(),
-            # MedFlamingoAdapter(),
             GeminiAdapter()
         ]
-        # self.embedder = SentenceTransformer(embed_model)
+        
+        logger.info(f"Initialized DynamicCaptionCloud with {len(self.models)} VLMs")
 
-    def build_cloud(self, image_path: str, n_prompts: int = 4, n_seeds: int = 2, dedup_threshold: float = 0.9):
-        all_captions = []
-
-        for model in self.models:
-            for _ in range(n_prompts):
+    def build_cloud(
+        self, 
+        image_path: str, 
+        n_prompts: int = 4, 
+        n_seeds: int = 2
+    ) -> Path:
+        """
+        Generate caption cloud for a single image.
+        
+        Implements: C(I)^dyn = ∪(j=1..V) ∪(k=1..P) ∪(s=1..S) {c_j,k,s}
+        where c_j,k,s = M_j(I; πk, s)
+        
+        Args:
+            image_path: Path to input image I
+            n_prompts: Number of prompts to sample per VLM
+            n_seeds: Number of random seeds per prompt
+            
+        Returns:
+            Path to saved caption cloud JSON
+        """
+        image_path = Path(image_path)
+        if not image_path.exists():
+            raise FileNotFoundError(f"Image not found: {image_path}")
+        
+        all_captions: List[Dict[str, Any]] = []
+        
+        logger.info(f"Building caption cloud for {image_path.name}")
+        logger.info(f"Configuration: {len(self.models)} VLMs × {n_prompts} prompts × {n_seeds} seeds")
+        
+        # Iterate over VLMs (models)
+        for model in tqdm(self.models, desc="VLMs"):
+            # Sample prompts for this model
+            for prompt_idx in range(n_prompts):
                 prompt = self.prompt_bank.sample_prompt()
+                
+                # Generate with different seeds
                 for seed in range(n_seeds):
-                    caption = model.generate_caption(image_path, prompt, seed)
-                    all_captions.append({
-                        "text": caption,
-                        "model": model.name,
-                        "prompt": prompt,
-                        "seed": seed
-                    })
-
-        deduped = self._deduplicate(all_captions, threshold=dedup_threshold)
-        out_path = self.output_dir / f"{Path(image_path).stem}.json"
-        with open(out_path, "w") as f:
-            json.dump(deduped, f, indent=2)
-        return out_path
-
-    def _deduplicate(self, captions, threshold=0.9):
-        texts = [c["text"] for c in captions]
-        emb = self.embedder.encode(texts, normalize_embeddings=True)
-        kept_indices = []
-        for i in range(len(emb)):
-            if not any(np.dot(emb[i], emb[j]) > threshold for j in kept_indices):
-                kept_indices.append(i)
-        return [captions[i] for i in kept_indices]
-
-
-if __name__ == "__main__":
-    cloud = DynamicCaptionCloud()
-    result = cloud.build_cloud("data/images/cyanosis_Image_1.jpg", n_prompts=3, n_seeds=2)
-    print(f"Caption cloud saved to: {result}")
+                    try:
+                        caption_text = model.generate_caption(
+                            str(image_path), 
+                            prompt, 
+                            seed
+                        )
+                        
+                        # Store with full provenance (meta_i)
+                        all_captions.append({
+                            "text": caption_text,
+                            "model": model.name,
+                            "prompt": prompt,
+                            "seed": seed
+                        })
+                        
+                    except Exception as e:
+                        logger.error(
+                            f"Failed to generate caption with {model.name} "
+                            f"(prompt_idx={prompt_idx}, seed={seed}): {e}"
+                        )
+        
+        # Save caption cloud
+        output_path = self.output_dir / f"{image_path.stem}.json"
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(all_captions, f, indent=2, ensure_ascii=False)
+        
+        logger.info(f"Generated {len(all_captions)} captions → {output_path}")
+        return output_path
