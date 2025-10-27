@@ -1,0 +1,77 @@
+{
+  "image_path": "data/images/cyanosis_Image_1.jpg",
+  "user_query": "What condition is shown?",
+  "clinical_query": "Differential diagnosis of medical conditions.",
+  "caption_cloud_stats": {
+    "total_captions": 12,
+    "vlm_models": [
+      "Gemini-2.5",
+      "GPT-4V"
+    ],
+    "unique_prompts": 5
+  },
+  "neighbors": [
+    {
+      "score": 0.9947270750999451,
+      "index": 3,
+      "caption": "I'm unable to diagnose medical conditions. However, the fingers appear to have a bluish discoloration, which could suggest a circulation issue. It's important to consult a healthcare professional for an accurate diagnosis and appropriate treatment.",
+      "meta": {
+        "text": "I'm unable to diagnose medical conditions. However, the fingers appear to have a bluish discoloration, which could suggest a circulation issue. It's important to consult a healthcare professional for an accurate diagnosis and appropriate treatment.",
+        "model": "GPT-4V",
+        "prompt": "Are there signs of infection, lesion, or fracture?",
+        "seed": 1
+      }
+    },
+    {
+      "score": 0.9943901300430298,
+      "index": 8,
+      "caption": "Abnormal findings. The fingertips are showing signs of cyanosis, which is the bluish discoloration of the skin due to poor circulation or inadequate oxygenation of the blood.",
+      "meta": {
+        "text": "Abnormal findings. The fingertips are showing signs of cyanosis, which is the bluish discoloration of the skin due to poor circulation or inadequate oxygenation of the blood.",
+        "model": "Gemini-2.5",
+        "prompt": "Indicate whether this image suggests normal or abnormal findings.",
+        "seed": 0
+      }
+    },
+    {
+      "score": 0.9940916895866394,
+      "index": 4,
+      "caption": "I'm sorry, I can't help with diagnosing medical conditions from images. However, if you're concerned about symptoms like discoloration of the fingers, it might be related to conditions such as Raynaud's phenomenon or cyanosis. It's important to consult a healthcare professional for an accurate diagnosis and appropriate treatment.",
+      "meta": {
+        "text": "I'm sorry, I can't help with diagnosing medical conditions from images. However, if you're concerned about symptoms like discoloration of the fingers, it might be related to conditions such as Raynaud's phenomenon or cyanosis. It's important to consult a healthcare professional for an accurate diagnosis and appropriate treatment.",
+        "model": "GPT-4V",
+        "prompt": "What are the key diagnostic features for differential diagnosis?",
+        "seed": 0
+      }
+    },
+    {
+      "score": 0.9940136671066284,
+      "index": 2,
+      "caption": "I'm not able to provide medical diagnoses. However, the fingers appear discolored, which can sometimes be associated with conditions affecting blood flow, such as Raynaud's phenomenon. It’s important to consult a healthcare professional for an accurate diagnosis and appropriate care.",
+      "meta": {
+        "text": "I'm not able to provide medical diagnoses. However, the fingers appear discolored, which can sometimes be associated with conditions affecting blood flow, such as Raynaud's phenomenon. It’s important to consult a healthcare professional for an accurate diagnosis and appropriate care.",
+        "model": "GPT-4V",
+        "prompt": "Are there signs of infection, lesion, or fracture?",
+        "seed": 0
+      }
+    },
+    {
+      "score": 0.9934157133102417,
+      "index": 7,
+      "caption": "Based on the image, the fingertips appear to be discolored, showing a bluish or purplish hue. This could indicate cyanosis, which is a sign of low oxygen levels in the blood or poor circulation. However, there are no obvious signs of infection, lesions, or fractures visible in the image.",
+      "meta": {
+        "text": "Based on the image, the fingertips appear to be discolored, showing a bluish or purplish hue. This could indicate cyanosis, which is a sign of low oxygen levels in the blood or poor circulation. However, there are no obvious signs of infection, lesions, or fractures visible in the image.",
+        "model": "Gemini-2.5",
+        "prompt": "Are there signs of infection, lesion, or fracture?",
+        "seed": 1
+      }
+    }
+  ],
+  "retrieval_scores": [
+    0.9947270750999451,
+    0.9943901300430298,
+    0.9940916895866394,
+    0.9940136671066284,
+    0.9934157133102417
+  ]
+}
