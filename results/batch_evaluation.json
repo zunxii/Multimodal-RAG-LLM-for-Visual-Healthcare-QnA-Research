@@ -1,0 +1,200 @@
+{
+  "num_cases": 1,
+  "per_case_results": [
+    {
+      "image_path": "data/images/cyanosis_Image_1.jpg",
+      "user_query": "What condition is shown?",
+      "pipeline_config": {
+        "use_kb": false,
+        "n_prompts": 4,
+        "n_seeds": 2,
+        "kb_top_k": 5,
+        "dynamic_top_k": 5,
+        "final_top_k": 10
+      },
+      "caption_cloud_stats": {
+        "total_captions": 12,
+        "vlm_models": [
+          "GPT-4V",
+          "Gemini-2.5"
+        ],
+        "unique_prompts": 5
+      },
+      "clinical_query": "Differential diagnosis clinical presentation.",
+      "retrieval": {
+        "dynamic_results": [
+          {
+            "score": 0.9946919679641724,
+            "index": 9,
+            "caption": "Abnormal. The blue coloration of the fingertips suggests cyanosis, which is an abnormal finding.",
+            "meta": {
+              "text": "Abnormal. The blue coloration of the fingertips suggests cyanosis, which is an abnormal finding.",
+              "model": "Gemini-2.5",
+              "prompt": "Indicate whether this image suggests normal or abnormal findings.",
+              "seed": 1
+            }
+          },
+          {
+            "score": 0.9946095943450928,
+            "index": 3,
+            "caption": "I'm unable to diagnose medical conditions. However, the fingers appear to have a bluish discoloration, which could suggest a circulation issue. It's important to consult a healthcare professional for an accurate diagnosis and appropriate treatment.",
+            "meta": {
+              "text": "I'm unable to diagnose medical conditions. However, the fingers appear to have a bluish discoloration, which could suggest a circulation issue. It's important to consult a healthcare professional for an accurate diagnosis and appropriate treatment.",
+              "model": "GPT-4V",
+              "prompt": "Are there signs of infection, lesion, or fracture?",
+              "seed": 1
+            }
+          },
+          {
+            "score": 0.9943503737449646,
+            "index": 8,
+            "caption": "Abnormal findings. The fingertips are showing signs of cyanosis, which is the bluish discoloration of the skin due to poor circulation or inadequate oxygenation of the blood.",
+            "meta": {
+              "text": "Abnormal findings. The fingertips are showing signs of cyanosis, which is the bluish discoloration of the skin due to poor circulation or inadequate oxygenation of the blood.",
+              "model": "Gemini-2.5",
+              "prompt": "Indicate whether this image suggests normal or abnormal findings.",
+              "seed": 0
+            }
+          },
+          {
+            "score": 0.9942872524261475,
+            "index": 4,
+            "caption": "I'm sorry, I can't help with diagnosing medical conditions from images. However, if you're concerned about symptoms like discoloration of the fingers, it might be related to conditions such as Raynaud's phenomenon or cyanosis. It's important to consult a healthcare professional for an accurate diagnosis and appropriate treatment.",
+            "meta": {
+              "text": "I'm sorry, I can't help with diagnosing medical conditions from images. However, if you're concerned about symptoms like discoloration of the fingers, it might be related to conditions such as Raynaud's phenomenon or cyanosis. It's important to consult a healthcare professional for an accurate diagnosis and appropriate treatment.",
+              "model": "GPT-4V",
+              "prompt": "What are the key diagnostic features for differential diagnosis?",
+              "seed": 0
+            }
+          },
+          {
+            "score": 0.9939161539077759,
+            "index": 2,
+            "caption": "I'm not able to provide medical diagnoses. However, the fingers appear discolored, which can sometimes be associated with conditions affecting blood flow, such as Raynaud's phenomenon. It’s important to consult a healthcare professional for an accurate diagnosis and appropriate care.",
+            "meta": {
+              "text": "I'm not able to provide medical diagnoses. However, the fingers appear discolored, which can sometimes be associated with conditions affecting blood flow, such as Raynaud's phenomenon. It’s important to consult a healthcare professional for an accurate diagnosis and appropriate care.",
+              "model": "GPT-4V",
+              "prompt": "Are there signs of infection, lesion, or fracture?",
+              "seed": 0
+            }
+          },
+          {
+            "score": 0.9927535057067871,
+            "index": 1,
+            "caption": "Here are some key visual attributes of the image:\n\n1. **Texture**: The skin appears smooth with slight visible lines and creases typical of fingers.\n\n2. **Opacity**: The skin is mostly opaque, but light can slightly affect the appearance of color, especially near the fingertips.\n\n3. **Shape**: The image shows four elongated, cylindrical fingers with rounded tips.\n\n4. **Color**: The fingers have a natural skin tone, with some bluish discoloration visible at the fingertips.\n\n5. **Pattern**: There are natural lines and folds on the fingers, particularly at the joints.",
+            "meta": {
+              "text": "Here are some key visual attributes of the image:\n\n1. **Texture**: The skin appears smooth with slight visible lines and creases typical of fingers.\n\n2. **Opacity**: The skin is mostly opaque, but light can slightly affect the appearance of color, especially near the fingertips.\n\n3. **Shape**: The image shows four elongated, cylindrical fingers with rounded tips.\n\n4. **Color**: The fingers have a natural skin tone, with some bluish discoloration visible at the fingertips.\n\n5. **Pattern**: There are natural lines and folds on the fingers, particularly at the joints.",
+              "model": "GPT-4V",
+              "prompt": "List key visual attributes like texture, opacity, and shape.",
+              "seed": 1
+            }
+          },
+          {
+            "score": 0.9923524856567383,
+            "index": 7,
+            "caption": "Based on the image, the fingertips appear to be discolored, showing a bluish or purplish hue. This could indicate cyanosis, which is a sign of low oxygen levels in the blood or poor circulation. However, there are no obvious signs of infection, lesions, or fractures visible in the image.",
+            "meta": {
+              "text": "Based on the image, the fingertips appear to be discolored, showing a bluish or purplish hue. This could indicate cyanosis, which is a sign of low oxygen levels in the blood or poor circulation. However, there are no obvious signs of infection, lesions, or fractures visible in the image.",
+              "model": "Gemini-2.5",
+              "prompt": "Are there signs of infection, lesion, or fracture?",
+              "seed": 1
+            }
+          },
+          {
+            "score": 0.9922149181365967,
+            "index": 0,
+            "caption": "The image displays the following key visual attributes:\n\n- **Texture**: The skin appears smooth but with visible lines and wrinkles typical of human skin.\n- **Opacity**: The skin is opaque, showing no transparency.\n- **Shape**: The fingers are elongated with rounded tips and visible joints.\n- **Color**: There is a noticeable bluish tint at the fingertips, transitioning to a more natural skin tone towards the palm.\n- **Pattern**: Lines and creases are visible on the skin, particularly at the joints.",
+            "meta": {
+              "text": "The image displays the following key visual attributes:\n\n- **Texture**: The skin appears smooth but with visible lines and wrinkles typical of human skin.\n- **Opacity**: The skin is opaque, showing no transparency.\n- **Shape**: The fingers are elongated with rounded tips and visible joints.\n- **Color**: There is a noticeable bluish tint at the fingertips, transitioning to a more natural skin tone towards the palm.\n- **Pattern**: Lines and creases are visible on the skin, particularly at the joints.",
+              "model": "GPT-4V",
+              "prompt": "List key visual attributes like texture, opacity, and shape.",
+              "seed": 0
+            }
+          },
+          {
+            "score": 0.9911068081855774,
+            "index": 6,
+            "caption": "Based on the image, the fingertips appear to be discolored with a bluish tint. This could be a sign of cyanosis, which indicates a lack of oxygen in the blood. There are no obvious signs of infection, lesion, or fracture visible in the image. However, cyanosis can be a symptom of various underlying medical conditions, including respiratory or cardiovascular problems. It's important to seek medical attention to determine the cause of the cyanosis and receive appropriate treatment.",
+            "meta": {
+              "text": "Based on the image, the fingertips appear to be discolored with a bluish tint. This could be a sign of cyanosis, which indicates a lack of oxygen in the blood. There are no obvious signs of infection, lesion, or fracture visible in the image. However, cyanosis can be a symptom of various underlying medical conditions, including respiratory or cardiovascular problems. It's important to seek medical attention to determine the cause of the cyanosis and receive appropriate treatment.",
+              "model": "Gemini-2.5",
+              "prompt": "Are there signs of infection, lesion, or fracture?",
+              "seed": 0
+            }
+          },
+          {
+            "score": 0.9898572564125061,
+            "index": 10,
+            "caption": "Here's a description of the color, texture, and surface characteristics based on the image:\n\n*   **Color:** The tips of the fingers are a noticeable bluish-purple color (cyanotic). The rest of the hand has a pale, pinkish skin tone.\n*   **Texture:** The skin appears smooth, with visible fine lines and wrinkles, particularly around the knuckles and creases of the fingers.\n*   **Surface Characteristics:** The skin appears dry.",
+            "meta": {
+              "text": "Here's a description of the color, texture, and surface characteristics based on the image:\n\n*   **Color:** The tips of the fingers are a noticeable bluish-purple color (cyanotic). The rest of the hand has a pale, pinkish skin tone.\n*   **Texture:** The skin appears smooth, with visible fine lines and wrinkles, particularly around the knuckles and creases of the fingers.\n*   **Surface Characteristics:** The skin appears dry.",
+              "model": "Gemini-2.5",
+              "prompt": "What are the color, texture, and surface characteristics?",
+              "seed": 0
+            }
+          }
+        ],
+        "retrieval_type": "dynamic_only"
+      },
+      "generation": {
+        "answer": "The fingertips in the image show a bluish discoloration [Source 6, Source 7, Source 8, Source 9, Source 10], suggesting cyanosis [Source 1, Source 3, Source 7, Source 9, Source 10]. Cyanosis is the bluish discoloration of the skin due to poor circulation or inadequate oxygenation of the blood [Source 3, Source 7, Source 9]. The skin appears smooth with visible lines and creases [Source 6, Source 8, Source 10]. There are no obvious signs of infection, lesions, or fractures visible [Source 7, Source 9]. Cyanosis can be a symptom of underlying medical conditions, including respiratory or cardiovascular problems [Source 9].\n\nConfidence: 1.0",
+        "confidence": 1.0,
+        "provenance": [
+          {
+            "source_num": 9,
+            "source_type": "dynamic_caption_cloud",
+            "content": "Based on the image, the fingertips appear to be discolored with a bluish tint. This could be a sign ..."
+          }
+        ],
+        "raw_answer": "The fingertips in the image show a bluish discoloration [Source 6, Source 7, Source 8, Source 9, Source 10], suggesting cyanosis [Source 1, Source 3, Source 7, Source 9, Source 10]. Cyanosis is the bluish discoloration of the skin due to poor circulation or inadequate oxygenation of the blood [Source 3, Source 7, Source 9]. The skin appears smooth with visible lines and creases [Source 6, Source 8, Source 10]. There are no obvious signs of infection, lesions, or fractures visible [Source 7, Source 9]. Cyanosis can be a symptom of underlying medical conditions, including respiratory or cardiovascular problems [Source 9].\n\nConfidence: 1.0",
+        "evidence_count": 10
+      },
+      "evaluation": {
+        "answer_quality": {
+          "BLEU": {
+            "error": "\n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - '/home/zunxii/nltk_data'\n    - '/home/zunxii/Desktop/multimodal/venv/nltk_data'\n    - '/home/zunxii/Desktop/multimodal/venv/share/nltk_data'\n    - '/home/zunxii/Desktop/multimodal/venv/lib/nltk_data'\n    - '/usr/share/nltk_data'\n    - '/usr/local/share/nltk_data'\n    - '/usr/lib/nltk_data'\n    - '/usr/local/lib/nltk_data'\n**********************************************************************\n"
+          },
+          "ROUGE": {
+            "ROUGE-1": 0.1081081081081081,
+            "ROUGE-2": 0.0,
+            "ROUGE-L": 0.07207207207207209
+          },
+          "BERTScore": {
+            "BERTScore-P": 0.34689176082611084,
+            "BERTScore-R": 0.7036374807357788,
+            "BERTScore-F1": 0.4646915793418884
+          }
+        },
+        "ground_truth": "Cyanosis with bluish fingertips indicating poor oxygenation."
+      }
+    }
+  ],
+  "aggregated_evaluation": {
+    "aggregated": {
+      "ROUGE_ROUGE-L": 0.07207207207207209,
+      "ROUGE_ROUGE-2": 0.0,
+      "ROUGE_ROUGE-1": 0.1081081081081081,
+      "BERTScore_BERTScore-R": 0.7036374807357788,
+      "BERTScore_BERTScore-P": 0.34689176082611084,
+      "BERTScore_BERTScore-F1": 0.4646915793418884
+    },
+    "per_sample": [
+      {
+        "BLEU": {
+          "error": "\n**********************************************************************\n  Resource \u001b[93mpunkt_tab\u001b[0m not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  \u001b[31m>>> import nltk\n  >>> nltk.download('punkt_tab')\n  \u001b[0m\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load \u001b[93mtokenizers/punkt_tab/english/\u001b[0m\n\n  Searched in:\n    - '/home/zunxii/nltk_data'\n    - '/home/zunxii/Desktop/multimodal/venv/nltk_data'\n    - '/home/zunxii/Desktop/multimodal/venv/share/nltk_data'\n    - '/home/zunxii/Desktop/multimodal/venv/lib/nltk_data'\n    - '/usr/share/nltk_data'\n    - '/usr/local/share/nltk_data'\n    - '/usr/lib/nltk_data'\n    - '/usr/local/lib/nltk_data'\n**********************************************************************\n"
+        },
+        "ROUGE": {
+          "ROUGE-1": 0.1081081081081081,
+          "ROUGE-2": 0.0,
+          "ROUGE-L": 0.07207207207207209
+        },
+        "BERTScore": {
+          "BERTScore-P": 0.34689176082611084,
+          "BERTScore-R": 0.7036374807357788,
+          "BERTScore-F1": 0.4646915793418884
+        }
+      }
+    ],
+    "num_samples": 1
+  }
+}
