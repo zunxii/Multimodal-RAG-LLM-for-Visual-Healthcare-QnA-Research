@@ -1,10 +1,11 @@
 """
 Build and manage the medical knowledge base from ClipSyntel dataset.
-Implements STEP 0 and STEP 1 from the architecture.
+Fixed to work with CSV format.
 """
 
 import json
 import numpy as np
+import pandas as pd
 import faiss
 from pathlib import Path
 from typing import List, Dict, Any, Optional
@@ -76,66 +77,78 @@ class MedicalKnowledgeBase:
         save_name: str = "clipsyntel_kb",
         use_caption_cloud: bool = False,
         n_prompts: int = 3,
-        n_seeds: int = 2
+        n_seeds: int = 2,
+        image_base_path: str = "data/images"
     ) -> None:
         """
-        Build knowledge base from ClipSyntel dataset.
+        Build knowledge base from ClipSyntel CSV dataset.
         
         Args:
-            dataset_path: Path to ClipSyntel dataset JSON
+            dataset_path: Path to ClipSyntel CSV file
             save_name: Name for saved knowledge base files
             use_caption_cloud: Whether to generate caption clouds for KB images
             n_prompts: Number of prompts per VLM (if using caption cloud)
             n_seeds: Number of seeds per prompt (if using caption cloud)
+            image_base_path: Base path for images
         """
         logger.info("="*60)
-        logger.info("Building Knowledge Base from ClipSyntel Dataset")
+        logger.info("Building Knowledge Base from ClipSyntel CSV Dataset")
         logger.info("="*60)
         
-        # Load dataset
+        # Load CSV dataset
         dataset_path = Path(dataset_path)
         if not dataset_path.exists():
             raise FileNotFoundError(f"Dataset not found: {dataset_path}")
         
-        with open(dataset_path, 'r', encoding='utf-8') as f:
-            dataset = json.load(f)
+        logger.info(f"Reading CSV: {dataset_path}")
+        df = pd.read_csv(dataset_path)
         
-        logger.info(f"Loaded {len(dataset)} cases from ClipSyntel")
+        logger.info(f"Loaded {len(df)} cases from ClipSyntel")
+        logger.info(f"Columns: {df.columns.tolist()}")
         
         # Process each case
         all_embeddings = []
         processed_cases = []
         
-        for case in tqdm(dataset, desc="Processing cases"):
+        image_base = Path(image_base_path)
+        
+        for idx, row in tqdm(df.iterrows(), total=len(df), desc="Processing cases"):
             try:
                 # Extract case information
-                image_path = case.get("image_path")
-                question = case.get("Question", "")
-                description = case.get("description", "")
-                category = case.get("category", [])
-                context = case.get("context", [])
+                # CSV headers: Question,Question_summ,image_path,category,context,description
+                image_filename = row['image_path']
+                question = row.get('Question', '')
+                question_summ = row.get('Question_summ', '')
+                description = row.get('description', '')
+                category = row.get('category', '')
+                context = row.get('context', '')
                 
-                if not image_path or not Path(image_path).exists():
-                    logger.warning(f"Skipping case: image not found at {image_path}")
+                # Construct full image path
+                image_path = image_base / image_filename
+                
+                if not image_path.exists():
+                    logger.warning(f"Image not found: {image_path}, skipping...")
                     continue
                 
-                # Generate caption (use question or description as caption)
-                caption = question if question else description
+                # Use question or description as caption
+                caption = question_summ if pd.notna(question_summ) else question
+                if not caption or pd.isna(caption):
+                    caption = description if pd.notna(description) else "Medical image"
                 
                 if use_caption_cloud:
                     # Generate caption cloud for this KB image
                     caption = self._generate_kb_caption_cloud(
-                        image_path, 
+                        str(image_path), 
                         n_prompts=n_prompts, 
                         n_seeds=n_seeds
                     )
                 
                 # Encode image
-                z_img = self.image_encoder.encode(image_path)
+                z_img = self.image_encoder.encode(str(image_path))
                 z_img = ensure_numpy_2d(z_img)
                 
                 # Encode caption
-                tau_txt = self.text_encoder.encode(caption)
+                tau_txt = self.text_encoder.encode(str(caption))
                 tau_txt = ensure_numpy_2d(tau_txt)
                 
                 # Convert to tensors
@@ -154,16 +167,21 @@ class MedicalKnowledgeBase:
                 # Store case metadata
                 processed_cases.append({
                     "image_path": str(image_path),
-                    "caption": caption,
-                    "description": description,
-                    "category": category,
-                    "context": context,
-                    "question": question
+                    "image_filename": image_filename,
+                    "caption": str(caption),
+                    "description": str(description) if pd.notna(description) else "",
+                    "category": str(category) if pd.notna(category) else "",
+                    "context": str(context) if pd.notna(context) else "",
+                    "question": str(question) if pd.notna(question) else "",
+                    "question_summ": str(question_summ) if pd.notna(question_summ) else ""
                 })
                 
             except Exception as e:
-                logger.error(f"Failed to process case {case.get('image_path')}: {e}")
+                logger.error(f"Failed to process case at index {idx}: {e}")
                 continue
+        
+        if len(all_embeddings) == 0:
+            raise ValueError("No cases were successfully processed!")
         
         # Build FAISS index
         embeddings_matrix = np.vstack(all_embeddings).astype(np.float32)

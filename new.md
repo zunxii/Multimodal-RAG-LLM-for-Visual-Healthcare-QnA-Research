@@ -213,3 +213,19 @@ END FOR
 │  • Cross-attention: Which parts of image/text matter for retrieval  │
 │  • Temperature: For calibrated confidence scores                     │
 └─────────────────────────────────────────────────────────────────────┘
+
+
+
+
+# 1. Build KB (once)
+python build_kb.py --dataset clipsyntel.json
+
+# 2. Run with hybrid retrieval
+python main_complete.py \
+    --image sample.jpg \
+    --query "What condition?" \
+    --ground_truth "Reference" \
+    --use_kb \
+    --load_kb clipsyntel_kb \
+    --kb_top_k 5 \
+    --dynamic_top_k 5
