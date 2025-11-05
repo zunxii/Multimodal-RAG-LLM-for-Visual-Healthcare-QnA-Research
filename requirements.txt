@@ -31,3 +31,5 @@ tqdm>=4.65.0
 # Optional: For better performance
 # accelerate>=0.20.0
 # bitsandbytes>=0.41.0
+rouge-score>=0.1.2
+bert-score>=0.3.13
