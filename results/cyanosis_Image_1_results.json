@@ -1,77 +1,77 @@
 {
   "image_path": "data/images/cyanosis_Image_1.jpg",
-  "user_query": "What condition is shown?",
-  "clinical_query": "Differential diagnosis of medical conditions.",
+  "user_query": "What condition is shown in this image?",
+  "clinical_query": "Image diagnosis differential.",
   "caption_cloud_stats": {
     "total_captions": 12,
     "vlm_models": [
       "Gemini-2.5",
       "GPT-4V"
     ],
-    "unique_prompts": 5
+    "unique_prompts": 4
   },
   "neighbors": [
     {
-      "score": 0.9947270750999451,
-      "index": 3,
-      "caption": "I'm unable to diagnose medical conditions. However, the fingers appear to have a bluish discoloration, which could suggest a circulation issue. It's important to consult a healthcare professional for an accurate diagnosis and appropriate treatment.",
+      "score": 0.9941163659095764,
+      "index": 7,
+      "caption": "Yes, the bluish discoloration of the fingertips (cyanosis) suggests a potential lack of oxygen in the blood supply to those areas. This requires urgent clinical attention as it could indicate a serious underlying medical condition.",
       "meta": {
-        "text": "I'm unable to diagnose medical conditions. However, the fingers appear to have a bluish discoloration, which could suggest a circulation issue. It's important to consult a healthcare professional for an accurate diagnosis and appropriate treatment.",
-        "model": "GPT-4V",
-        "prompt": "Are there signs of infection, lesion, or fracture?",
+        "text": "Yes, the bluish discoloration of the fingertips (cyanosis) suggests a potential lack of oxygen in the blood supply to those areas. This requires urgent clinical attention as it could indicate a serious underlying medical condition.",
+        "model": "Gemini-2.5",
+        "prompt": "Is there any feature requiring urgent clinical attention?",
         "seed": 1
       }
     },
     {
-      "score": 0.9943901300430298,
-      "index": 8,
-      "caption": "Abnormal findings. The fingertips are showing signs of cyanosis, which is the bluish discoloration of the skin due to poor circulation or inadequate oxygenation of the blood.",
+      "score": 0.9932190775871277,
+      "index": 9,
+      "caption": "Based on the image, the key diagnostic feature is the **blue or purplish discoloration of the fingers**. This is known as **cyanosis**.\n\nHere's a breakdown of why this is important for differential diagnosis:\n\n*   **Cyanosis** indicates a lack of oxygen in the blood or poor circulation. This can be caused by a variety of conditions, including:\n    *   **Raynaud's phenomenon:** This is a common condition where blood vessels in the fingers and toes constrict in response to cold or stress, causing them to turn white or blue.\n    *   **Peripheral artery disease (PAD):** This condition involves narrowing of the arteries that supply blood to the limbs, which can lead to cyanosis.\n    *   **Exposure to cold:** Prolonged exposure to cold temperatures can cause vasoconstriction and cyanosis.\n    *   **Lung or heart conditions:** Certain lung or heart conditions can lead to hypoxemia (low blood oxygen levels), which can manifest as cyanosis in the extremities.\n    *   **Blood disorders:** Some blood disorders can affect oxygen transport and cause cyanosis.\n    *   **Medications:** Certain medications can cause cyanosis as a side effect.\n\nTherefore, the presence of cyanosis in the fingers is a crucial diagnostic feature that warrants further investigation to determine the underlying cause.",
       "meta": {
-        "text": "Abnormal findings. The fingertips are showing signs of cyanosis, which is the bluish discoloration of the skin due to poor circulation or inadequate oxygenation of the blood.",
+        "text": "Based on the image, the key diagnostic feature is the **blue or purplish discoloration of the fingers**. This is known as **cyanosis**.\n\nHere's a breakdown of why this is important for differential diagnosis:\n\n*   **Cyanosis** indicates a lack of oxygen in the blood or poor circulation. This can be caused by a variety of conditions, including:\n    *   **Raynaud's phenomenon:** This is a common condition where blood vessels in the fingers and toes constrict in response to cold or stress, causing them to turn white or blue.\n    *   **Peripheral artery disease (PAD):** This condition involves narrowing of the arteries that supply blood to the limbs, which can lead to cyanosis.\n    *   **Exposure to cold:** Prolonged exposure to cold temperatures can cause vasoconstriction and cyanosis.\n    *   **Lung or heart conditions:** Certain lung or heart conditions can lead to hypoxemia (low blood oxygen levels), which can manifest as cyanosis in the extremities.\n    *   **Blood disorders:** Some blood disorders can affect oxygen transport and cause cyanosis.\n    *   **Medications:** Certain medications can cause cyanosis as a side effect.\n\nTherefore, the presence of cyanosis in the fingers is a crucial diagnostic feature that warrants further investigation to determine the underlying cause.",
         "model": "Gemini-2.5",
-        "prompt": "Indicate whether this image suggests normal or abnormal findings.",
+        "prompt": "What are the key diagnostic features for differential diagnosis?",
+        "seed": 1
+      }
+    },
+    {
+      "score": 0.9931877851486206,
+      "index": 5,
+      "caption": "The image shows fingers with the following characteristics:\n\n- **Color**: The fingertips appear bluish, indicating possible cyanosis, while the rest of the fingers have a more natural skin tone.\n- **Texture**: The skin looks smooth with visible lines and creases typical of finger joints.\n- **Surface Characteristics**: The fingers have a natural sheen and appear slightly desaturated in color, likely due to the bluish tint on the fingertips.",
+      "meta": {
+        "text": "The image shows fingers with the following characteristics:\n\n- **Color**: The fingertips appear bluish, indicating possible cyanosis, while the rest of the fingers have a more natural skin tone.\n- **Texture**: The skin looks smooth with visible lines and creases typical of finger joints.\n- **Surface Characteristics**: The fingers have a natural sheen and appear slightly desaturated in color, likely due to the bluish tint on the fingertips.",
+        "model": "GPT-4V",
+        "prompt": "What are the color, texture, and surface characteristics?",
+        "seed": 1
+      }
+    },
+    {
+      "score": 0.9931492805480957,
+      "index": 4,
+      "caption": "The image shows fingers with the following characteristics:\n\n- **Color**: The fingers have a bluish tint, particularly at the tips, indicating possible cyanosis.\n- **Texture**: The skin appears smooth with visible lines and creases typical of fingers.\n- **Surface Characteristics**: The surface looks dry and matte, with no visible moisture or glossiness.",
+      "meta": {
+        "text": "The image shows fingers with the following characteristics:\n\n- **Color**: The fingers have a bluish tint, particularly at the tips, indicating possible cyanosis.\n- **Texture**: The skin appears smooth with visible lines and creases typical of fingers.\n- **Surface Characteristics**: The surface looks dry and matte, with no visible moisture or glossiness.",
+        "model": "GPT-4V",
+        "prompt": "What are the color, texture, and surface characteristics?",
         "seed": 0
       }
     },
     {
-      "score": 0.9940916895866394,
-      "index": 4,
-      "caption": "I'm sorry, I can't help with diagnosing medical conditions from images. However, if you're concerned about symptoms like discoloration of the fingers, it might be related to conditions such as Raynaud's phenomenon or cyanosis. It's important to consult a healthcare professional for an accurate diagnosis and appropriate treatment.",
+      "score": 0.9924443364143372,
+      "index": 8,
+      "caption": "Here are the key diagnostic features that can be observed in the image for differential diagnosis:\n\n*   **Cyanosis:** The fingertips are distinctly blue or purplish in color. This indicates cyanosis, which is a sign of insufficient oxygen in the blood.\n\nBased on these features, possible diagnoses to consider include:\n\n*   **Raynaud's phenomenon:** This is a condition where blood vessels narrow in the fingers and toes in response to cold or stress. It can cause cyanosis and numbness.\n\n*   **Peripheral artery disease (PAD):** This condition involves narrowing of the arteries that supply blood to the limbs. It can also cause cyanosis, especially in the extremities.\n\n*   **Hypothermia:** Exposure to cold temperatures can cause cyanosis due to reduced blood flow and oxygen delivery to the extremities.\n\n*   **Certain medical conditions:** Such as lung or heart problems, can lead to cyanosis due to impaired oxygenation of the blood.",
       "meta": {
-        "text": "I'm sorry, I can't help with diagnosing medical conditions from images. However, if you're concerned about symptoms like discoloration of the fingers, it might be related to conditions such as Raynaud's phenomenon or cyanosis. It's important to consult a healthcare professional for an accurate diagnosis and appropriate treatment.",
-        "model": "GPT-4V",
+        "text": "Here are the key diagnostic features that can be observed in the image for differential diagnosis:\n\n*   **Cyanosis:** The fingertips are distinctly blue or purplish in color. This indicates cyanosis, which is a sign of insufficient oxygen in the blood.\n\nBased on these features, possible diagnoses to consider include:\n\n*   **Raynaud's phenomenon:** This is a condition where blood vessels narrow in the fingers and toes in response to cold or stress. It can cause cyanosis and numbness.\n\n*   **Peripheral artery disease (PAD):** This condition involves narrowing of the arteries that supply blood to the limbs. It can also cause cyanosis, especially in the extremities.\n\n*   **Hypothermia:** Exposure to cold temperatures can cause cyanosis due to reduced blood flow and oxygen delivery to the extremities.\n\n*   **Certain medical conditions:** Such as lung or heart problems, can lead to cyanosis due to impaired oxygenation of the blood.",
+        "model": "Gemini-2.5",
         "prompt": "What are the key diagnostic features for differential diagnosis?",
         "seed": 0
-      }
-    },
-    {
-      "score": 0.9940136671066284,
-      "index": 2,
-      "caption": "I'm not able to provide medical diagnoses. However, the fingers appear discolored, which can sometimes be associated with conditions affecting blood flow, such as Raynaud's phenomenon. It’s important to consult a healthcare professional for an accurate diagnosis and appropriate care.",
-      "meta": {
-        "text": "I'm not able to provide medical diagnoses. However, the fingers appear discolored, which can sometimes be associated with conditions affecting blood flow, such as Raynaud's phenomenon. It’s important to consult a healthcare professional for an accurate diagnosis and appropriate care.",
-        "model": "GPT-4V",
-        "prompt": "Are there signs of infection, lesion, or fracture?",
-        "seed": 0
-      }
-    },
-    {
-      "score": 0.9934157133102417,
-      "index": 7,
-      "caption": "Based on the image, the fingertips appear to be discolored, showing a bluish or purplish hue. This could indicate cyanosis, which is a sign of low oxygen levels in the blood or poor circulation. However, there are no obvious signs of infection, lesions, or fractures visible in the image.",
-      "meta": {
-        "text": "Based on the image, the fingertips appear to be discolored, showing a bluish or purplish hue. This could indicate cyanosis, which is a sign of low oxygen levels in the blood or poor circulation. However, there are no obvious signs of infection, lesions, or fractures visible in the image.",
-        "model": "Gemini-2.5",
-        "prompt": "Are there signs of infection, lesion, or fracture?",
-        "seed": 1
       }
     }
   ],
   "retrieval_scores": [
-    0.9947270750999451,
-    0.9943901300430298,
-    0.9940916895866394,
-    0.9940136671066284,
-    0.9934157133102417
+    0.9941163659095764,
+    0.9932190775871277,
+    0.9931877851486206,
+    0.9931492805480957,
+    0.9924443364143372
   ]
 }

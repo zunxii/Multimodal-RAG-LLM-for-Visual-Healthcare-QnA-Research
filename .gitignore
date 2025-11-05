@@ -9,6 +9,7 @@ __pycache__/
 venv/
 env/
 .venv/
+.env.local
 
 # === IDE and editor settings ===
 .vscode/
@@ -54,3 +55,4 @@ dist/
 htmlcov/
 .tox/
 .cache/
+.env.local
