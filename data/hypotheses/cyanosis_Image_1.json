@@ -1,0 +1,146 @@
+[
+  {
+    "diagnosis": "Raynaud's Phenomenon",
+    "mechanism": "Vasospasm of digital arteries leading to reduced blood flow, causing pallor, cyanosis, and then rubor upon reperfusion. Triggered by cold or stress.",
+    "visual_features": [
+      "Cyanotic fingertips",
+      "Sharp demarcation between affected and unaffected skin",
+      "Possible pallor before cyanosis (not visible in this image, but typical)"
+    ],
+    "keywords": [
+      "Raynaud's",
+      "vasospasm",
+      "digital cyanosis",
+      "cold sensitivity",
+      "fingertips",
+      "ischemia"
+    ],
+    "urgency": "moderate",
+    "body_regions": [
+      "Fingers",
+      "Toes",
+      "Ears",
+      "Nose"
+    ],
+    "clinical_context": "Episodic color changes in the digits, typically triggered by cold exposure or emotional stress. Can be primary or secondary to an underlying autoimmune condition.",
+    "confidence": 0.0
+  },
+  {
+    "diagnosis": "Acrocyanosis",
+    "mechanism": "Persistent cyanosis of the extremities due to small vessel vasospasm and reduced blood flow. Unlike Raynaud's, it is usually painless and persistent.",
+    "visual_features": [
+      "Persistent cyanosis of the fingertips",
+      "Cold and clammy extremities",
+      "Absence of distinct color changes (pallor, cyanosis, rubor)",
+      "Symmetrical distribution"
+    ],
+    "keywords": [
+      "Acrocyanosis",
+      "peripheral cyanosis",
+      "persistent cyanosis",
+      "cold extremities",
+      "vasoconstriction",
+      "fingertips"
+    ],
+    "urgency": "low",
+    "body_regions": [
+      "Fingers",
+      "Toes",
+      "Hands",
+      "Feet"
+    ],
+    "clinical_context": "Chronic, painless cyanosis of the extremities, often exacerbated by cold, but present even in warmer conditions. Usually benign but can be associated with underlying conditions.",
+    "confidence": 0.0
+  },
+  {
+    "diagnosis": "Acute Arterial Occlusion",
+    "mechanism": "Sudden blockage of an artery supplying the hand, leading to ischemia and potentially tissue necrosis. Can be caused by thrombus, embolus, or trauma.",
+    "visual_features": [
+      "Cyanosis of digits",
+      "Pallor of hand",
+      "Coldness of hand",
+      "Possible absent pulse",
+      "Pain (not directly visible but clinically relevant)",
+      "Mottling"
+    ],
+    "keywords": [
+      "arterial occlusion",
+      "ischemia",
+      "acute limb ischemia",
+      "cyanosis",
+      "pallor",
+      "pain",
+      "absent pulse",
+      "thrombus",
+      "embolus"
+    ],
+    "urgency": "emergency",
+    "body_regions": [
+      "Hand",
+      "Fingers"
+    ],
+    "clinical_context": "Sudden onset of pain, pallor, pulselessness, paresthesia, paralysis, and poikilothermia in the affected limb. Requires immediate intervention to restore blood flow.",
+    "confidence": 0.0
+  },
+  {
+    "diagnosis": "Systemic Sclerosis (Scleroderma)",
+    "mechanism": "Autoimmune disease causing fibrosis and vascular abnormalities, including Raynaud's phenomenon and digital ischemia due to thickening of blood vessel walls and reduced blood flow.",
+    "visual_features": [
+      "Cyanosis of fingertips",
+      "Skin thickening (not directly visible but would be present on exam)",
+      "Digital ulcers (may or may not be present)",
+      "Puffy fingers (early stage)",
+      "Telangiectasias"
+    ],
+    "keywords": [
+      "scleroderma",
+      "systemic sclerosis",
+      "Raynaud's",
+      "digital ischemia",
+      "skin thickening",
+      "autoimmune",
+      "fingertips",
+      "vasculopathy"
+    ],
+    "urgency": "moderate",
+    "body_regions": [
+      "Fingers",
+      "Hands",
+      "Skin",
+      "Internal organs"
+    ],
+    "clinical_context": "Progressive autoimmune disease affecting the skin and internal organs. Raynaud's phenomenon is often an early manifestation, followed by skin thickening and other systemic symptoms.",
+    "confidence": 0.0
+  },
+  {
+    "diagnosis": "Peripheral Artery Disease (PAD)",
+    "mechanism": "Atherosclerosis leading to narrowing of arteries supplying the extremities, resulting in reduced blood flow and ischemia. Can cause chronic cyanosis or acute worsening with cold exposure.",
+    "visual_features": [
+      "Cyanosis of digits",
+      "Pallor on elevation",
+      "Rubor on dependency",
+      "Absent or diminished pulses",
+      "Shiny skin",
+      "Loss of hair on legs/feet"
+    ],
+    "keywords": [
+      "PAD",
+      "peripheral artery disease",
+      "atherosclerosis",
+      "ischemia",
+      "cyanosis",
+      "claudication",
+      "absent pulses",
+      "fingertips"
+    ],
+    "urgency": "moderate",
+    "body_regions": [
+      "Legs",
+      "Feet",
+      "Fingers",
+      "Hands"
+    ],
+    "clinical_context": "Chronic condition characterized by reduced blood flow to the extremities due to atherosclerosis. Can present with claudication, rest pain, and non-healing ulcers. Cyanosis may be present chronically or worsen with cold exposure.",
+    "confidence": 0.0
+  }
+]

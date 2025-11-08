@@ -1,0 +1,141 @@
+[
+  {
+    "diagnosis": "Peripheral Edema",
+    "mechanism": "Increased hydrostatic pressure or decreased oncotic pressure in capillaries leads to fluid extravasation into the interstitial space. Impaired lymphatic drainage can also contribute.",
+    "visual_features": [
+      "Pitting edema on the lower extremities",
+      "Swelling of the ankles and feet",
+      "Shiny skin due to stretching",
+      "Loss of skin creases"
+    ],
+    "keywords": [
+      "edema",
+      "swelling",
+      "lower extremities",
+      "pitting",
+      "ankle",
+      "foot",
+      "fluid retention"
+    ],
+    "urgency": "moderate",
+    "body_regions": [
+      "lower extremities",
+      "ankles",
+      "feet"
+    ],
+    "clinical_context": "Commonly seen in patients with heart failure, kidney disease, liver disease, venous insufficiency, or prolonged standing. Severity depends on the underlying cause.",
+    "confidence": 0.0
+  },
+  {
+    "diagnosis": "Deep Vein Thrombosis (DVT)",
+    "mechanism": "Formation of a blood clot in a deep vein, obstructing venous return and causing increased hydrostatic pressure distal to the thrombus, leading to edema.",
+    "visual_features": [
+      "Unilateral leg swelling",
+      "Erythema",
+      "Warmth",
+      "Pain or tenderness",
+      "Possible visible superficial veins"
+    ],
+    "keywords": [
+      "DVT",
+      "deep vein thrombosis",
+      "leg pain",
+      "leg swelling",
+      "unilateral edema",
+      "clot",
+      "thrombosis"
+    ],
+    "urgency": "high",
+    "body_regions": [
+      "lower extremities",
+      "calf",
+      "thigh"
+    ],
+    "clinical_context": "Requires prompt diagnosis and treatment with anticoagulation to prevent pulmonary embolism. Risk factors include immobility, surgery, cancer, and hypercoagulable states.",
+    "confidence": 0.0
+  },
+  {
+    "diagnosis": "Cellulitis",
+    "mechanism": "Bacterial infection of the skin and subcutaneous tissues, causing inflammation and fluid accumulation.",
+    "visual_features": [
+      "Erythema",
+      "Warmth",
+      "Tenderness",
+      "Edema",
+      "Poorly defined borders",
+      "Possible skin breaks or ulcers"
+    ],
+    "keywords": [
+      "cellulitis",
+      "infection",
+      "skin infection",
+      "erythema",
+      "warmth",
+      "tenderness",
+      "edema",
+      "leg"
+    ],
+    "urgency": "moderate",
+    "body_regions": [
+      "lower extremities",
+      "skin",
+      "subcutaneous tissue"
+    ],
+    "clinical_context": "Typically caused by Streptococcus or Staphylococcus bacteria. Requires antibiotic treatment. Can progress to sepsis if untreated.",
+    "confidence": 0.0
+  },
+  {
+    "diagnosis": "Lymphedema",
+    "mechanism": "Impairment of lymphatic drainage leading to accumulation of protein-rich fluid in the interstitial space. Can be primary (congenital) or secondary (e.g., due to surgery, radiation, infection).",
+    "visual_features": [
+      "Non-pitting edema",
+      "Thickened skin (peau d'orange)",
+      "Stemmer's sign (inability to pinch the skin on the dorsum of the second toe)",
+      "Fibrosis"
+    ],
+    "keywords": [
+      "lymphedema",
+      "lymphatic obstruction",
+      "non-pitting edema",
+      "peau d'orange",
+      "Stemmer's sign",
+      "leg swelling"
+    ],
+    "urgency": "low",
+    "body_regions": [
+      "lower extremities",
+      "arms",
+      "genitals"
+    ],
+    "clinical_context": "Chronic condition requiring management with compression therapy and lymphatic drainage techniques. Can lead to recurrent infections and impaired function.",
+    "confidence": 0.0
+  },
+  {
+    "diagnosis": "Chronic Venous Insufficiency",
+    "mechanism": "Valvular incompetence in the veins of the lower extremities leads to venous hypertension, causing fluid leakage into the interstitial space and edema.",
+    "visual_features": [
+      "Edema that worsens with standing",
+      "Varicose veins",
+      "Skin discoloration (hyperpigmentation or stasis dermatitis)",
+      "Ulceration (especially near the ankles)",
+      "Lipodermatosclerosis"
+    ],
+    "keywords": [
+      "chronic venous insufficiency",
+      "CVI",
+      "venous stasis",
+      "varicose veins",
+      "leg ulcers",
+      "edema",
+      "hyperpigmentation"
+    ],
+    "urgency": "low",
+    "body_regions": [
+      "lower extremities",
+      "ankles",
+      "legs"
+    ],
+    "clinical_context": "Common in patients with a history of DVT or prolonged standing. Management includes compression therapy, leg elevation, and wound care if ulcers are present.",
+    "confidence": 0.0
+  }
+]

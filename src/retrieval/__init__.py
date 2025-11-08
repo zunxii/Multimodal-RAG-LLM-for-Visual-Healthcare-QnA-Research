@@ -1,7 +1,11 @@
 """Retrieval and indexing module"""
 
-from .multimodal_retriever import MultimodalRetriever
 from .knowledge_base import MedicalKnowledgeBase
-from .hybrid_retriever import HybridRetriever
+from .clinical_relevance import ClinicalRelevanceScorer
+from .hypothesis_retriever import MultiHypothesisRetriever
 
-__all__ = ['MultimodalRetriever', 'MedicalKnowledgeBase', 'HybridRetriever']
+__all__ = [
+    'MedicalKnowledgeBase',
+    'ClinicalRelevanceScorer',
+    'MultiHypothesisRetriever'
+]

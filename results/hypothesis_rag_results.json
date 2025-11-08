@@ -1,0 +1,287 @@
+{
+  "image_path": "data/images/edema_Image_1.jpg",
+  "user_query": "What condition is shown in this image?",
+  "pipeline_config": {
+    "approach": "hypothesis_based",
+    "n_hypotheses": 5,
+    "top_k_per_hypothesis": 10,
+    "relevance_threshold": 0.3
+  },
+  "hypotheses": [
+    {
+      "diagnosis": "Peripheral Edema",
+      "mechanism": "Increased hydrostatic pressure or decreased oncotic pressure in capillaries leads to fluid extravasation into the interstitial space. Impaired lymphatic drainage can also contribute.",
+      "urgency": "moderate",
+      "keywords": [
+        "edema",
+        "swelling",
+        "lower extremities",
+        "pitting",
+        "ankle",
+        "foot",
+        "fluid retention"
+      ]
+    },
+    {
+      "diagnosis": "Deep Vein Thrombosis (DVT)",
+      "mechanism": "Formation of a blood clot in a deep vein, obstructing venous return and causing increased hydrostatic pressure distal to the thrombus, leading to edema.",
+      "urgency": "high",
+      "keywords": [
+        "DVT",
+        "deep vein thrombosis",
+        "leg pain",
+        "leg swelling",
+        "unilateral edema",
+        "clot",
+        "thrombosis"
+      ]
+    },
+    {
+      "diagnosis": "Cellulitis",
+      "mechanism": "Bacterial infection of the skin and subcutaneous tissues, causing inflammation and fluid accumulation.",
+      "urgency": "moderate",
+      "keywords": [
+        "cellulitis",
+        "infection",
+        "skin infection",
+        "erythema",
+        "warmth",
+        "tenderness",
+        "edema",
+        "leg"
+      ]
+    },
+    {
+      "diagnosis": "Lymphedema",
+      "mechanism": "Impairment of lymphatic drainage leading to accumulation of protein-rich fluid in the interstitial space. Can be primary (congenital) or secondary (e.g., due to surgery, radiation, infection).",
+      "urgency": "low",
+      "keywords": [
+        "lymphedema",
+        "lymphatic obstruction",
+        "non-pitting edema",
+        "peau d'orange",
+        "Stemmer's sign",
+        "leg swelling"
+      ]
+    },
+    {
+      "diagnosis": "Chronic Venous Insufficiency",
+      "mechanism": "Valvular incompetence in the veins of the lower extremities leads to venous hypertension, causing fluid leakage into the interstitial space and edema.",
+      "urgency": "low",
+      "keywords": [
+        "chronic venous insufficiency",
+        "CVI",
+        "venous stasis",
+        "varicose veins",
+        "leg ulcers",
+        "edema",
+        "hyperpigmentation"
+      ]
+    }
+  ],
+  "retrieval": {
+    "hypothesis_evidence": {
+      "Peripheral Edema": {
+        "case_count": 0,
+        "top_cases": []
+      },
+      "Deep Vein Thrombosis (DVT)": {
+        "case_count": 0,
+        "top_cases": []
+      },
+      "Cellulitis": {
+        "case_count": 4,
+        "top_cases": [
+          {
+            "image_path": "data/images/skin growth_Image_49.jpg",
+            "image_filename": "skin growth_Image_49.jpg",
+            "caption": "What could be the cause of a flesh-colored growth that has been present for two years and is gradually increasing in size?",
+            "description": "Skin growths, or lesions, are visible abnormalities on the skin. An image may show a bump, nodule, or patch that differs in color, texture, or shape from the surrounding skin. Skin growths can be benign or malignant, and can vary widely in size and appearance. They may be flat or raised, smooth or rough, and can be caused by various factors, including sun exposure, genetics, and viruses. \n",
+            "category": "skin growth",
+            "context": "['\"Skin growth\" is a broad term, and the symptoms can vary greatly depending on the type of growth and its cause. Here\\'s a general overview of common symptoms associated with skin growths:\\n\\n* **Lump or bump:**  This is the most obvious symptom. The growth can be raised or flat, smooth or rough, and can vary in size and color.\\n* **Color change:**  The skin growth might be a different color than your normal skin, such as brown, black, red, or white.\\n* **Texture change:** The skin growth might have a different texture than your normal skin, such as scaly, rough, or warty.\\n* **Pain:** Some skin growths can be painful, especially if they are inflamed or pressing on nerves.\\n* **Itching:** Some skin growths can be itchy, especially if they are irritated.\\n* **Bleeding:** Some skin growths can bleed easily, especially if they are scratched or bumped.\\n* **Change in size or shape:** The skin growth might change in size or shape over time.\\n* **Spread:**  Some skin growths can spread to other areas of the body.\\n\\n**Important Note:**  Skin growths can be caused by a variety of factors, ranging from benign conditions like moles or warts to more serious conditions like skin cancer. If you notice a new skin growth or a change in an existing growth, it\\'s important to see a doctor or dermatologist for a diagnosis and appropriate treatment.', \"Diagnosing a skin growth involves understanding its cause, which can range from benign to serious. Here's a brief overview of the tests and procedures typically used:\\n\\n1. **Physical Examination:**\\n    * A doctor or dermatologist will carefully examine the skin growth, assessing its size, shape, color, texture, and any signs of inflammation, pain, or bleeding. They'll also check for any other suspicious growths or lesions on the skin.\\n\\n2. **Medical History:**\\n    * The doctor will ask about your symptoms, including when the growth appeared, how it's changed over time, and any other relevant factors like sun exposure, family history of skin cancer, or any recent changes in your medications or health.\\n\\n3. **Imaging Tests:**\\n    * Depending on the suspected cause, imaging tests may be used to visualize the growth and surrounding tissues. These might include:\\n        * **Dermoscopy:** A handheld device that uses magnified lighting to examine the skin growth in detail.\\n        * **Biopsy:** A small sample of tissue is taken from the growth and examined under a microscope. This is the gold standard for diagnosing skin cancer and other conditions.\\n\\n4. **Other Tests:**\\n    * Depending on the suspected cause, additional tests may be needed, such as:\\n        * **Blood tests:** To check for underlying conditions that can affect the skin.\\n\\n**Important Note:**  Skin growths can have a wide range of causes, some serious. It's essential to see a doctor for proper diagnosis and treatment, as some growths may require immediate attention.\"]",
+            "question": "Hi doctor,I am a 48 year old female. My weight is 58 kg.Â I have noticed a round flesh color growth that hangs externally on my pubic hair outside my labia majora. Please doctor see the current condition below .It has beenÂ there for two years. It does not hurt but it is bothering me because it became a bit bigger. I have attached a photo. I am taking medicine Zoloft and Valium. Please help me.",
+            "question_summ": "What could be the cause of a flesh-colored growth that has been present for two years and is gradually increasing in size?",
+            "retrieval_score": 0.007203906774520874,
+            "kb_index": 2848,
+            "clinical_relevance": 0.4,
+            "combined_score": 0.16432234406471255
+          },
+          {
+            "image_path": "data/images/skin growth_Image_1.jpg",
+            "image_filename": "skin growth_Image_1.jpg",
+            "caption": "What could be the cause of the hard, non-painful lump on Anita's face that has persisted for over 3 weeks?",
+            "description": "Skin growths, or lesions, are visible abnormalities on the skin. An image may show a bump, nodule, or patch that differs in color, texture, or shape from the surrounding skin. Skin growths can be benign or malignant, and can vary widely in size and appearance. They may be flat or raised, smooth or rough, and can be caused by various factors, including sun exposure, genetics, and viruses. \n",
+            "category": "skin growth",
+            "context": "['\"Skin growth\" is a broad term, and the symptoms can vary greatly depending on the type of growth and its cause. Here\\'s a general overview of common symptoms associated with skin growths:\\n\\n* **Lump or bump:**  This is the most obvious symptom. The growth can be raised or flat, smooth or rough, and can vary in size and color.\\n* **Color change:**  The skin growth might be a different color than your normal skin, such as brown, black, red, or white.\\n* **Texture change:** The skin growth might have a different texture than your normal skin, such as scaly, rough, or warty.\\n* **Pain:** Some skin growths can be painful, especially if they are inflamed or pressing on nerves.\\n* **Itching:** Some skin growths can be itchy, especially if they are irritated.\\n* **Bleeding:** Some skin growths can bleed easily, especially if they are scratched or bumped.\\n* **Change in size or shape:** The skin growth might change in size or shape over time.\\n* **Spread:**  Some skin growths can spread to other areas of the body.\\n\\n**Important Note:**  Skin growths can be caused by a variety of factors, ranging from benign conditions like moles or warts to more serious conditions like skin cancer. If you notice a new skin growth or a change in an existing growth, it\\'s important to see a doctor or dermatologist for a diagnosis and appropriate treatment.', \"Diagnosing a skin growth involves understanding its cause, which can range from benign to serious. Here's a brief overview of the tests and procedures typically used:\\n\\n1. **Physical Examination:**\\n    * A doctor or dermatologist will carefully examine the skin growth, assessing its size, shape, color, texture, and any signs of inflammation, pain, or bleeding. They'll also check for any other suspicious growths or lesions on the skin.\\n\\n2. **Medical History:**\\n    * The doctor will ask about your symptoms, including when the growth appeared, how it's changed over time, and any other relevant factors like sun exposure, family history of skin cancer, or any recent changes in your medications or health.\\n\\n3. **Imaging Tests:**\\n    * Depending on the suspected cause, imaging tests may be used to visualize the growth and surrounding tissues. These might include:\\n        * **Dermoscopy:** A handheld device that uses magnified lighting to examine the skin growth in detail.\\n        * **Biopsy:** A small sample of tissue is taken from the growth and examined under a microscope. This is the gold standard for diagnosing skin cancer and other conditions.\\n\\n4. **Other Tests:**\\n    * Depending on the suspected cause, additional tests may be needed, such as:\\n        * **Blood tests:** To check for underlying conditions that can affect the skin.\\n\\n**Important Note:**  Skin growths can have a wide range of causes, some serious. It's essential to see a doctor for proper diagnosis and treatment, as some growths may require immediate attention.\"]",
+            "question": "Hi, I have a small lump on the side of my face, a bit like a small cyst. I have had these behind my ears also before,Doctor Please look at the image    below  but they had gone within a few weeks. This on the otherhand, has been on my face for about 3 and half weeks now. What could this be. It is hard to touch but not painful. Thank you. Anita",
+            "question_summ": "What could be the cause of the hard, non-painful lump on Anita's face that has persisted for over 3 weeks?",
+            "retrieval_score": 0.004959486424922943,
+            "kb_index": 1313,
+            "clinical_relevance": 0.4,
+            "combined_score": 0.1629756918549538
+          },
+          {
+            "image_path": "data/images/skin growth_Image_1.jpg",
+            "image_filename": "skin growth_Image_1.jpg",
+            "caption": "Is the bruise on the bottom of the ear related to persistent fiddling to pop acne or a separate issue?",
+            "description": "Skin growths, or lesions, are visible abnormalities on the skin. An image may show a bump, nodule, or patch that differs in color, texture, or shape from the surrounding skin. Skin growths can be benign or malignant, and can vary widely in size and appearance. They may be flat or raised, smooth or rough, and can be caused by various factors, including sun exposure, genetics, and viruses. \n",
+            "category": "skin growth",
+            "context": "['\"Skin growth\" is a broad term, and the symptoms can vary greatly depending on the type of growth and its cause. Here\\'s a general overview of common symptoms associated with skin growths:\\n\\n* **Lump or bump:**  This is the most obvious symptom. The growth can be raised or flat, smooth or rough, and can vary in size and color.\\n* **Color change:**  The skin growth might be a different color than your normal skin, such as brown, black, red, or white.\\n* **Texture change:** The skin growth might have a different texture than your normal skin, such as scaly, rough, or warty.\\n* **Pain:** Some skin growths can be painful, especially if they are inflamed or pressing on nerves.\\n* **Itching:** Some skin growths can be itchy, especially if they are irritated.\\n* **Bleeding:** Some skin growths can bleed easily, especially if they are scratched or bumped.\\n* **Change in size or shape:** The skin growth might change in size or shape over time.\\n* **Spread:**  Some skin growths can spread to other areas of the body.\\n\\n**Important Note:**  Skin growths can be caused by a variety of factors, ranging from benign conditions like moles or warts to more serious conditions like skin cancer. If you notice a new skin growth or a change in an existing growth, it\\'s important to see a doctor or dermatologist for a diagnosis and appropriate treatment.', \"Diagnosing a skin growth involves understanding its cause, which can range from benign to serious. Here's a brief overview of the tests and procedures typically used:\\n\\n1. **Physical Examination:**\\n    * A doctor or dermatologist will carefully examine the skin growth, assessing its size, shape, color, texture, and any signs of inflammation, pain, or bleeding. They'll also check for any other suspicious growths or lesions on the skin.\\n\\n2. **Medical History:**\\n    * The doctor will ask about your symptoms, including when the growth appeared, how it's changed over time, and any other relevant factors like sun exposure, family history of skin cancer, or any recent changes in your medications or health.\\n\\n3. **Imaging Tests:**\\n    * Depending on the suspected cause, imaging tests may be used to visualize the growth and surrounding tissues. These might include:\\n        * **Dermoscopy:** A handheld device that uses magnified lighting to examine the skin growth in detail.\\n        * **Biopsy:** A small sample of tissue is taken from the growth and examined under a microscope. This is the gold standard for diagnosing skin cancer and other conditions.\\n\\n4. **Other Tests:**\\n    * Depending on the suspected cause, additional tests may be needed, such as:\\n        * **Blood tests:** To check for underlying conditions that can affect the skin.\\n\\n**Important Note:**  Skin growths can have a wide range of causes, some serious. It's essential to see a doctor for proper diagnosis and treatment, as some growths may require immediate attention.\"]",
+            "question": "Hello, I have an issue concerning what appears to be a bruise on the bottom of my ear. A few days prior I had felt a small some abnormality in my skin underneath the hole of where my piercing is (had the piercing itself for six years) and this evening noticed a bruise this evening. The image for that is attached below .I was curious to know if it had been caused with my persistent fiddling to pop the acne beforehand or if the lump wasn t actually what it appeared.",
+            "question_summ": "Is the bruise on the bottom of the ear related to persistent fiddling to pop acne or a separate issue?",
+            "retrieval_score": 0.004580404609441757,
+            "kb_index": 1658,
+            "clinical_relevance": 0.4,
+            "combined_score": 0.16274824276566507
+          }
+        ]
+      },
+      "Lymphedema": {
+        "case_count": 0,
+        "top_cases": []
+      },
+      "Chronic Venous Insufficiency": {
+        "case_count": 0,
+        "top_cases": []
+      }
+    },
+    "aggregation": {
+      "primary_diagnosis": "Cellulitis",
+      "confidence": 0.2452210351973772,
+      "supporting_cases": [
+        {
+          "image_path": "data/images/skin growth_Image_49.jpg",
+          "image_filename": "skin growth_Image_49.jpg",
+          "caption": "What could be the cause of a flesh-colored growth that has been present for two years and is gradually increasing in size?",
+          "description": "Skin growths, or lesions, are visible abnormalities on the skin. An image may show a bump, nodule, or patch that differs in color, texture, or shape from the surrounding skin. Skin growths can be benign or malignant, and can vary widely in size and appearance. They may be flat or raised, smooth or rough, and can be caused by various factors, including sun exposure, genetics, and viruses. \n",
+          "category": "skin growth",
+          "context": "['\"Skin growth\" is a broad term, and the symptoms can vary greatly depending on the type of growth and its cause. Here\\'s a general overview of common symptoms associated with skin growths:\\n\\n* **Lump or bump:**  This is the most obvious symptom. The growth can be raised or flat, smooth or rough, and can vary in size and color.\\n* **Color change:**  The skin growth might be a different color than your normal skin, such as brown, black, red, or white.\\n* **Texture change:** The skin growth might have a different texture than your normal skin, such as scaly, rough, or warty.\\n* **Pain:** Some skin growths can be painful, especially if they are inflamed or pressing on nerves.\\n* **Itching:** Some skin growths can be itchy, especially if they are irritated.\\n* **Bleeding:** Some skin growths can bleed easily, especially if they are scratched or bumped.\\n* **Change in size or shape:** The skin growth might change in size or shape over time.\\n* **Spread:**  Some skin growths can spread to other areas of the body.\\n\\n**Important Note:**  Skin growths can be caused by a variety of factors, ranging from benign conditions like moles or warts to more serious conditions like skin cancer. If you notice a new skin growth or a change in an existing growth, it\\'s important to see a doctor or dermatologist for a diagnosis and appropriate treatment.', \"Diagnosing a skin growth involves understanding its cause, which can range from benign to serious. Here's a brief overview of the tests and procedures typically used:\\n\\n1. **Physical Examination:**\\n    * A doctor or dermatologist will carefully examine the skin growth, assessing its size, shape, color, texture, and any signs of inflammation, pain, or bleeding. They'll also check for any other suspicious growths or lesions on the skin.\\n\\n2. **Medical History:**\\n    * The doctor will ask about your symptoms, including when the growth appeared, how it's changed over time, and any other relevant factors like sun exposure, family history of skin cancer, or any recent changes in your medications or health.\\n\\n3. **Imaging Tests:**\\n    * Depending on the suspected cause, imaging tests may be used to visualize the growth and surrounding tissues. These might include:\\n        * **Dermoscopy:** A handheld device that uses magnified lighting to examine the skin growth in detail.\\n        * **Biopsy:** A small sample of tissue is taken from the growth and examined under a microscope. This is the gold standard for diagnosing skin cancer and other conditions.\\n\\n4. **Other Tests:**\\n    * Depending on the suspected cause, additional tests may be needed, such as:\\n        * **Blood tests:** To check for underlying conditions that can affect the skin.\\n\\n**Important Note:**  Skin growths can have a wide range of causes, some serious. It's essential to see a doctor for proper diagnosis and treatment, as some growths may require immediate attention.\"]",
+          "question": "Hi doctor,I am a 48 year old female. My weight is 58 kg.Â I have noticed a round flesh color growth that hangs externally on my pubic hair outside my labia majora. Please doctor see the current condition below .It has beenÂ there for two years. It does not hurt but it is bothering me because it became a bit bigger. I have attached a photo. I am taking medicine Zoloft and Valium. Please help me.",
+          "question_summ": "What could be the cause of a flesh-colored growth that has been present for two years and is gradually increasing in size?",
+          "retrieval_score": 0.007203906774520874,
+          "kb_index": 2848,
+          "clinical_relevance": 0.4,
+          "combined_score": 0.16432234406471255
+        },
+        {
+          "image_path": "data/images/skin growth_Image_1.jpg",
+          "image_filename": "skin growth_Image_1.jpg",
+          "caption": "What could be the cause of the hard, non-painful lump on Anita's face that has persisted for over 3 weeks?",
+          "description": "Skin growths, or lesions, are visible abnormalities on the skin. An image may show a bump, nodule, or patch that differs in color, texture, or shape from the surrounding skin. Skin growths can be benign or malignant, and can vary widely in size and appearance. They may be flat or raised, smooth or rough, and can be caused by various factors, including sun exposure, genetics, and viruses. \n",
+          "category": "skin growth",
+          "context": "['\"Skin growth\" is a broad term, and the symptoms can vary greatly depending on the type of growth and its cause. Here\\'s a general overview of common symptoms associated with skin growths:\\n\\n* **Lump or bump:**  This is the most obvious symptom. The growth can be raised or flat, smooth or rough, and can vary in size and color.\\n* **Color change:**  The skin growth might be a different color than your normal skin, such as brown, black, red, or white.\\n* **Texture change:** The skin growth might have a different texture than your normal skin, such as scaly, rough, or warty.\\n* **Pain:** Some skin growths can be painful, especially if they are inflamed or pressing on nerves.\\n* **Itching:** Some skin growths can be itchy, especially if they are irritated.\\n* **Bleeding:** Some skin growths can bleed easily, especially if they are scratched or bumped.\\n* **Change in size or shape:** The skin growth might change in size or shape over time.\\n* **Spread:**  Some skin growths can spread to other areas of the body.\\n\\n**Important Note:**  Skin growths can be caused by a variety of factors, ranging from benign conditions like moles or warts to more serious conditions like skin cancer. If you notice a new skin growth or a change in an existing growth, it\\'s important to see a doctor or dermatologist for a diagnosis and appropriate treatment.', \"Diagnosing a skin growth involves understanding its cause, which can range from benign to serious. Here's a brief overview of the tests and procedures typically used:\\n\\n1. **Physical Examination:**\\n    * A doctor or dermatologist will carefully examine the skin growth, assessing its size, shape, color, texture, and any signs of inflammation, pain, or bleeding. They'll also check for any other suspicious growths or lesions on the skin.\\n\\n2. **Medical History:**\\n    * The doctor will ask about your symptoms, including when the growth appeared, how it's changed over time, and any other relevant factors like sun exposure, family history of skin cancer, or any recent changes in your medications or health.\\n\\n3. **Imaging Tests:**\\n    * Depending on the suspected cause, imaging tests may be used to visualize the growth and surrounding tissues. These might include:\\n        * **Dermoscopy:** A handheld device that uses magnified lighting to examine the skin growth in detail.\\n        * **Biopsy:** A small sample of tissue is taken from the growth and examined under a microscope. This is the gold standard for diagnosing skin cancer and other conditions.\\n\\n4. **Other Tests:**\\n    * Depending on the suspected cause, additional tests may be needed, such as:\\n        * **Blood tests:** To check for underlying conditions that can affect the skin.\\n\\n**Important Note:**  Skin growths can have a wide range of causes, some serious. It's essential to see a doctor for proper diagnosis and treatment, as some growths may require immediate attention.\"]",
+          "question": "Hi, I have a small lump on the side of my face, a bit like a small cyst. I have had these behind my ears also before,Doctor Please look at the image    below  but they had gone within a few weeks. This on the otherhand, has been on my face for about 3 and half weeks now. What could this be. It is hard to touch but not painful. Thank you. Anita",
+          "question_summ": "What could be the cause of the hard, non-painful lump on Anita's face that has persisted for over 3 weeks?",
+          "retrieval_score": 0.004959486424922943,
+          "kb_index": 1313,
+          "clinical_relevance": 0.4,
+          "combined_score": 0.1629756918549538
+        },
+        {
+          "image_path": "data/images/skin growth_Image_1.jpg",
+          "image_filename": "skin growth_Image_1.jpg",
+          "caption": "Is the bruise on the bottom of the ear related to persistent fiddling to pop acne or a separate issue?",
+          "description": "Skin growths, or lesions, are visible abnormalities on the skin. An image may show a bump, nodule, or patch that differs in color, texture, or shape from the surrounding skin. Skin growths can be benign or malignant, and can vary widely in size and appearance. They may be flat or raised, smooth or rough, and can be caused by various factors, including sun exposure, genetics, and viruses. \n",
+          "category": "skin growth",
+          "context": "['\"Skin growth\" is a broad term, and the symptoms can vary greatly depending on the type of growth and its cause. Here\\'s a general overview of common symptoms associated with skin growths:\\n\\n* **Lump or bump:**  This is the most obvious symptom. The growth can be raised or flat, smooth or rough, and can vary in size and color.\\n* **Color change:**  The skin growth might be a different color than your normal skin, such as brown, black, red, or white.\\n* **Texture change:** The skin growth might have a different texture than your normal skin, such as scaly, rough, or warty.\\n* **Pain:** Some skin growths can be painful, especially if they are inflamed or pressing on nerves.\\n* **Itching:** Some skin growths can be itchy, especially if they are irritated.\\n* **Bleeding:** Some skin growths can bleed easily, especially if they are scratched or bumped.\\n* **Change in size or shape:** The skin growth might change in size or shape over time.\\n* **Spread:**  Some skin growths can spread to other areas of the body.\\n\\n**Important Note:**  Skin growths can be caused by a variety of factors, ranging from benign conditions like moles or warts to more serious conditions like skin cancer. If you notice a new skin growth or a change in an existing growth, it\\'s important to see a doctor or dermatologist for a diagnosis and appropriate treatment.', \"Diagnosing a skin growth involves understanding its cause, which can range from benign to serious. Here's a brief overview of the tests and procedures typically used:\\n\\n1. **Physical Examination:**\\n    * A doctor or dermatologist will carefully examine the skin growth, assessing its size, shape, color, texture, and any signs of inflammation, pain, or bleeding. They'll also check for any other suspicious growths or lesions on the skin.\\n\\n2. **Medical History:**\\n    * The doctor will ask about your symptoms, including when the growth appeared, how it's changed over time, and any other relevant factors like sun exposure, family history of skin cancer, or any recent changes in your medications or health.\\n\\n3. **Imaging Tests:**\\n    * Depending on the suspected cause, imaging tests may be used to visualize the growth and surrounding tissues. These might include:\\n        * **Dermoscopy:** A handheld device that uses magnified lighting to examine the skin growth in detail.\\n        * **Biopsy:** A small sample of tissue is taken from the growth and examined under a microscope. This is the gold standard for diagnosing skin cancer and other conditions.\\n\\n4. **Other Tests:**\\n    * Depending on the suspected cause, additional tests may be needed, such as:\\n        * **Blood tests:** To check for underlying conditions that can affect the skin.\\n\\n**Important Note:**  Skin growths can have a wide range of causes, some serious. It's essential to see a doctor for proper diagnosis and treatment, as some growths may require immediate attention.\"]",
+          "question": "Hello, I have an issue concerning what appears to be a bruise on the bottom of my ear. A few days prior I had felt a small some abnormality in my skin underneath the hole of where my piercing is (had the piercing itself for six years) and this evening noticed a bruise this evening. The image for that is attached below .I was curious to know if it had been caused with my persistent fiddling to pop the acne beforehand or if the lump wasn t actually what it appeared.",
+          "question_summ": "Is the bruise on the bottom of the ear related to persistent fiddling to pop acne or a separate issue?",
+          "retrieval_score": 0.004580404609441757,
+          "kb_index": 1658,
+          "clinical_relevance": 0.4,
+          "combined_score": 0.16274824276566507
+        },
+        {
+          "image_path": "data/images/skin growth_Image_1.jpg",
+          "image_filename": "skin growth_Image_1.jpg",
+          "caption": "What could be the cause of the red, swollen bite with black in the middle, along with fatigue and droopy eyes? Should she seek medical attention?",
+          "description": "Skin growths, or lesions, are visible abnormalities on the skin. An image may show a bump, nodule, or patch that differs in color, texture, or shape from the surrounding skin. Skin growths can be benign or malignant, and can vary widely in size and appearance. They may be flat or raised, smooth or rough, and can be caused by various factors, including sun exposure, genetics, and viruses. \n",
+          "category": "skin growth",
+          "context": "['\"Skin growth\" is a broad term, and the symptoms can vary greatly depending on the type of growth and its cause. Here\\'s a general overview of common symptoms associated with skin growths:\\n\\n* **Lump or bump:**  This is the most obvious symptom. The growth can be raised or flat, smooth or rough, and can vary in size and color.\\n* **Color change:**  The skin growth might be a different color than your normal skin, such as brown, black, red, or white.\\n* **Texture change:** The skin growth might have a different texture than your normal skin, such as scaly, rough, or warty.\\n* **Pain:** Some skin growths can be painful, especially if they are inflamed or pressing on nerves.\\n* **Itching:** Some skin growths can be itchy, especially if they are irritated.\\n* **Bleeding:** Some skin growths can bleed easily, especially if they are scratched or bumped.\\n* **Change in size or shape:** The skin growth might change in size or shape over time.\\n* **Spread:**  Some skin growths can spread to other areas of the body.\\n\\n**Important Note:**  Skin growths can be caused by a variety of factors, ranging from benign conditions like moles or warts to more serious conditions like skin cancer. If you notice a new skin growth or a change in an existing growth, it\\'s important to see a doctor or dermatologist for a diagnosis and appropriate treatment.', \"Diagnosing a skin growth involves understanding its cause, which can range from benign to serious. Here's a brief overview of the tests and procedures typically used:\\n\\n1. **Physical Examination:**\\n    * A doctor or dermatologist will carefully examine the skin growth, assessing its size, shape, color, texture, and any signs of inflammation, pain, or bleeding. They'll also check for any other suspicious growths or lesions on the skin.\\n\\n2. **Medical History:**\\n    * The doctor will ask about your symptoms, including when the growth appeared, how it's changed over time, and any other relevant factors like sun exposure, family history of skin cancer, or any recent changes in your medications or health.\\n\\n3. **Imaging Tests:**\\n    * Depending on the suspected cause, imaging tests may be used to visualize the growth and surrounding tissues. These might include:\\n        * **Dermoscopy:** A handheld device that uses magnified lighting to examine the skin growth in detail.\\n        * **Biopsy:** A small sample of tissue is taken from the growth and examined under a microscope. This is the gold standard for diagnosing skin cancer and other conditions.\\n\\n4. **Other Tests:**\\n    * Depending on the suspected cause, additional tests may be needed, such as:\\n        * **Blood tests:** To check for underlying conditions that can affect the skin.\\n\\n**Important Note:**  Skin growths can have a wide range of causes, some serious. It's essential to see a doctor for proper diagnosis and treatment, as some growths may require immediate attention.\"]",
+          "question": "My daughter has just returned from America and has some sort of bite I think on her breast. It is very red and swollen and over a large area.Doctor the image for that is attached  below  It is very painful and shows signs of black in the middle.MIT has also started to peel. She feels very tired and heavy eyed. What could this be and should she see a doctor or go to a & e",
+          "question_summ": "What could be the cause of the red, swollen bite with black in the middle, along with fatigue and droopy eyes? Should she seek medical attention?",
+          "retrieval_score": 0.0036067888140678406,
+          "kb_index": 1576,
+          "clinical_relevance": 0.4,
+          "combined_score": 0.16216407328844074
+        }
+      ],
+      "case_count": 4,
+      "differential": [],
+      "all_scores": {
+        "Cellulitis": {
+          "quality": 0.16305258799344302,
+          "quantity": 0.4,
+          "diversity": 0.2,
+          "confidence": 0.2452210351973772,
+          "case_count": 4,
+          "supporting_cases": [
+            {
+              "image_path": "data/images/skin growth_Image_49.jpg",
+              "image_filename": "skin growth_Image_49.jpg",
+              "caption": "What could be the cause of a flesh-colored growth that has been present for two years and is gradually increasing in size?",
+              "description": "Skin growths, or lesions, are visible abnormalities on the skin. An image may show a bump, nodule, or patch that differs in color, texture, or shape from the surrounding skin. Skin growths can be benign or malignant, and can vary widely in size and appearance. They may be flat or raised, smooth or rough, and can be caused by various factors, including sun exposure, genetics, and viruses. \n",
+              "category": "skin growth",
+              "context": "['\"Skin growth\" is a broad term, and the symptoms can vary greatly depending on the type of growth and its cause. Here\\'s a general overview of common symptoms associated with skin growths:\\n\\n* **Lump or bump:**  This is the most obvious symptom. The growth can be raised or flat, smooth or rough, and can vary in size and color.\\n* **Color change:**  The skin growth might be a different color than your normal skin, such as brown, black, red, or white.\\n* **Texture change:** The skin growth might have a different texture than your normal skin, such as scaly, rough, or warty.\\n* **Pain:** Some skin growths can be painful, especially if they are inflamed or pressing on nerves.\\n* **Itching:** Some skin growths can be itchy, especially if they are irritated.\\n* **Bleeding:** Some skin growths can bleed easily, especially if they are scratched or bumped.\\n* **Change in size or shape:** The skin growth might change in size or shape over time.\\n* **Spread:**  Some skin growths can spread to other areas of the body.\\n\\n**Important Note:**  Skin growths can be caused by a variety of factors, ranging from benign conditions like moles or warts to more serious conditions like skin cancer. If you notice a new skin growth or a change in an existing growth, it\\'s important to see a doctor or dermatologist for a diagnosis and appropriate treatment.', \"Diagnosing a skin growth involves understanding its cause, which can range from benign to serious. Here's a brief overview of the tests and procedures typically used:\\n\\n1. **Physical Examination:**\\n    * A doctor or dermatologist will carefully examine the skin growth, assessing its size, shape, color, texture, and any signs of inflammation, pain, or bleeding. They'll also check for any other suspicious growths or lesions on the skin.\\n\\n2. **Medical History:**\\n    * The doctor will ask about your symptoms, including when the growth appeared, how it's changed over time, and any other relevant factors like sun exposure, family history of skin cancer, or any recent changes in your medications or health.\\n\\n3. **Imaging Tests:**\\n    * Depending on the suspected cause, imaging tests may be used to visualize the growth and surrounding tissues. These might include:\\n        * **Dermoscopy:** A handheld device that uses magnified lighting to examine the skin growth in detail.\\n        * **Biopsy:** A small sample of tissue is taken from the growth and examined under a microscope. This is the gold standard for diagnosing skin cancer and other conditions.\\n\\n4. **Other Tests:**\\n    * Depending on the suspected cause, additional tests may be needed, such as:\\n        * **Blood tests:** To check for underlying conditions that can affect the skin.\\n\\n**Important Note:**  Skin growths can have a wide range of causes, some serious. It's essential to see a doctor for proper diagnosis and treatment, as some growths may require immediate attention.\"]",
+              "question": "Hi doctor,I am a 48 year old female. My weight is 58 kg.Â I have noticed a round flesh color growth that hangs externally on my pubic hair outside my labia majora. Please doctor see the current condition below .It has beenÂ there for two years. It does not hurt but it is bothering me because it became a bit bigger. I have attached a photo. I am taking medicine Zoloft and Valium. Please help me.",
+              "question_summ": "What could be the cause of a flesh-colored growth that has been present for two years and is gradually increasing in size?",
+              "retrieval_score": 0.007203906774520874,
+              "kb_index": 2848,
+              "clinical_relevance": 0.4,
+              "combined_score": 0.16432234406471255
+            },
+            {
+              "image_path": "data/images/skin growth_Image_1.jpg",
+              "image_filename": "skin growth_Image_1.jpg",
+              "caption": "What could be the cause of the hard, non-painful lump on Anita's face that has persisted for over 3 weeks?",
+              "description": "Skin growths, or lesions, are visible abnormalities on the skin. An image may show a bump, nodule, or patch that differs in color, texture, or shape from the surrounding skin. Skin growths can be benign or malignant, and can vary widely in size and appearance. They may be flat or raised, smooth or rough, and can be caused by various factors, including sun exposure, genetics, and viruses. \n",
+              "category": "skin growth",
+              "context": "['\"Skin growth\" is a broad term, and the symptoms can vary greatly depending on the type of growth and its cause. Here\\'s a general overview of common symptoms associated with skin growths:\\n\\n* **Lump or bump:**  This is the most obvious symptom. The growth can be raised or flat, smooth or rough, and can vary in size and color.\\n* **Color change:**  The skin growth might be a different color than your normal skin, such as brown, black, red, or white.\\n* **Texture change:** The skin growth might have a different texture than your normal skin, such as scaly, rough, or warty.\\n* **Pain:** Some skin growths can be painful, especially if they are inflamed or pressing on nerves.\\n* **Itching:** Some skin growths can be itchy, especially if they are irritated.\\n* **Bleeding:** Some skin growths can bleed easily, especially if they are scratched or bumped.\\n* **Change in size or shape:** The skin growth might change in size or shape over time.\\n* **Spread:**  Some skin growths can spread to other areas of the body.\\n\\n**Important Note:**  Skin growths can be caused by a variety of factors, ranging from benign conditions like moles or warts to more serious conditions like skin cancer. If you notice a new skin growth or a change in an existing growth, it\\'s important to see a doctor or dermatologist for a diagnosis and appropriate treatment.', \"Diagnosing a skin growth involves understanding its cause, which can range from benign to serious. Here's a brief overview of the tests and procedures typically used:\\n\\n1. **Physical Examination:**\\n    * A doctor or dermatologist will carefully examine the skin growth, assessing its size, shape, color, texture, and any signs of inflammation, pain, or bleeding. They'll also check for any other suspicious growths or lesions on the skin.\\n\\n2. **Medical History:**\\n    * The doctor will ask about your symptoms, including when the growth appeared, how it's changed over time, and any other relevant factors like sun exposure, family history of skin cancer, or any recent changes in your medications or health.\\n\\n3. **Imaging Tests:**\\n    * Depending on the suspected cause, imaging tests may be used to visualize the growth and surrounding tissues. These might include:\\n        * **Dermoscopy:** A handheld device that uses magnified lighting to examine the skin growth in detail.\\n        * **Biopsy:** A small sample of tissue is taken from the growth and examined under a microscope. This is the gold standard for diagnosing skin cancer and other conditions.\\n\\n4. **Other Tests:**\\n    * Depending on the suspected cause, additional tests may be needed, such as:\\n        * **Blood tests:** To check for underlying conditions that can affect the skin.\\n\\n**Important Note:**  Skin growths can have a wide range of causes, some serious. It's essential to see a doctor for proper diagnosis and treatment, as some growths may require immediate attention.\"]",
+              "question": "Hi, I have a small lump on the side of my face, a bit like a small cyst. I have had these behind my ears also before,Doctor Please look at the image    below  but they had gone within a few weeks. This on the otherhand, has been on my face for about 3 and half weeks now. What could this be. It is hard to touch but not painful. Thank you. Anita",
+              "question_summ": "What could be the cause of the hard, non-painful lump on Anita's face that has persisted for over 3 weeks?",
+              "retrieval_score": 0.004959486424922943,
+              "kb_index": 1313,
+              "clinical_relevance": 0.4,
+              "combined_score": 0.1629756918549538
+            },
+            {
+              "image_path": "data/images/skin growth_Image_1.jpg",
+              "image_filename": "skin growth_Image_1.jpg",
+              "caption": "Is the bruise on the bottom of the ear related to persistent fiddling to pop acne or a separate issue?",
+              "description": "Skin growths, or lesions, are visible abnormalities on the skin. An image may show a bump, nodule, or patch that differs in color, texture, or shape from the surrounding skin. Skin growths can be benign or malignant, and can vary widely in size and appearance. They may be flat or raised, smooth or rough, and can be caused by various factors, including sun exposure, genetics, and viruses. \n",
+              "category": "skin growth",
+              "context": "['\"Skin growth\" is a broad term, and the symptoms can vary greatly depending on the type of growth and its cause. Here\\'s a general overview of common symptoms associated with skin growths:\\n\\n* **Lump or bump:**  This is the most obvious symptom. The growth can be raised or flat, smooth or rough, and can vary in size and color.\\n* **Color change:**  The skin growth might be a different color than your normal skin, such as brown, black, red, or white.\\n* **Texture change:** The skin growth might have a different texture than your normal skin, such as scaly, rough, or warty.\\n* **Pain:** Some skin growths can be painful, especially if they are inflamed or pressing on nerves.\\n* **Itching:** Some skin growths can be itchy, especially if they are irritated.\\n* **Bleeding:** Some skin growths can bleed easily, especially if they are scratched or bumped.\\n* **Change in size or shape:** The skin growth might change in size or shape over time.\\n* **Spread:**  Some skin growths can spread to other areas of the body.\\n\\n**Important Note:**  Skin growths can be caused by a variety of factors, ranging from benign conditions like moles or warts to more serious conditions like skin cancer. If you notice a new skin growth or a change in an existing growth, it\\'s important to see a doctor or dermatologist for a diagnosis and appropriate treatment.', \"Diagnosing a skin growth involves understanding its cause, which can range from benign to serious. Here's a brief overview of the tests and procedures typically used:\\n\\n1. **Physical Examination:**\\n    * A doctor or dermatologist will carefully examine the skin growth, assessing its size, shape, color, texture, and any signs of inflammation, pain, or bleeding. They'll also check for any other suspicious growths or lesions on the skin.\\n\\n2. **Medical History:**\\n    * The doctor will ask about your symptoms, including when the growth appeared, how it's changed over time, and any other relevant factors like sun exposure, family history of skin cancer, or any recent changes in your medications or health.\\n\\n3. **Imaging Tests:**\\n    * Depending on the suspected cause, imaging tests may be used to visualize the growth and surrounding tissues. These might include:\\n        * **Dermoscopy:** A handheld device that uses magnified lighting to examine the skin growth in detail.\\n        * **Biopsy:** A small sample of tissue is taken from the growth and examined under a microscope. This is the gold standard for diagnosing skin cancer and other conditions.\\n\\n4. **Other Tests:**\\n    * Depending on the suspected cause, additional tests may be needed, such as:\\n        * **Blood tests:** To check for underlying conditions that can affect the skin.\\n\\n**Important Note:**  Skin growths can have a wide range of causes, some serious. It's essential to see a doctor for proper diagnosis and treatment, as some growths may require immediate attention.\"]",
+              "question": "Hello, I have an issue concerning what appears to be a bruise on the bottom of my ear. A few days prior I had felt a small some abnormality in my skin underneath the hole of where my piercing is (had the piercing itself for six years) and this evening noticed a bruise this evening. The image for that is attached below .I was curious to know if it had been caused with my persistent fiddling to pop the acne beforehand or if the lump wasn t actually what it appeared.",
+              "question_summ": "Is the bruise on the bottom of the ear related to persistent fiddling to pop acne or a separate issue?",
+              "retrieval_score": 0.004580404609441757,
+              "kb_index": 1658,
+              "clinical_relevance": 0.4,
+              "combined_score": 0.16274824276566507
+            },
+            {
+              "image_path": "data/images/skin growth_Image_1.jpg",
+              "image_filename": "skin growth_Image_1.jpg",
+              "caption": "What could be the cause of the red, swollen bite with black in the middle, along with fatigue and droopy eyes? Should she seek medical attention?",
+              "description": "Skin growths, or lesions, are visible abnormalities on the skin. An image may show a bump, nodule, or patch that differs in color, texture, or shape from the surrounding skin. Skin growths can be benign or malignant, and can vary widely in size and appearance. They may be flat or raised, smooth or rough, and can be caused by various factors, including sun exposure, genetics, and viruses. \n",
+              "category": "skin growth",
+              "context": "['\"Skin growth\" is a broad term, and the symptoms can vary greatly depending on the type of growth and its cause. Here\\'s a general overview of common symptoms associated with skin growths:\\n\\n* **Lump or bump:**  This is the most obvious symptom. The growth can be raised or flat, smooth or rough, and can vary in size and color.\\n* **Color change:**  The skin growth might be a different color than your normal skin, such as brown, black, red, or white.\\n* **Texture change:** The skin growth might have a different texture than your normal skin, such as scaly, rough, or warty.\\n* **Pain:** Some skin growths can be painful, especially if they are inflamed or pressing on nerves.\\n* **Itching:** Some skin growths can be itchy, especially if they are irritated.\\n* **Bleeding:** Some skin growths can bleed easily, especially if they are scratched or bumped.\\n* **Change in size or shape:** The skin growth might change in size or shape over time.\\n* **Spread:**  Some skin growths can spread to other areas of the body.\\n\\n**Important Note:**  Skin growths can be caused by a variety of factors, ranging from benign conditions like moles or warts to more serious conditions like skin cancer. If you notice a new skin growth or a change in an existing growth, it\\'s important to see a doctor or dermatologist for a diagnosis and appropriate treatment.', \"Diagnosing a skin growth involves understanding its cause, which can range from benign to serious. Here's a brief overview of the tests and procedures typically used:\\n\\n1. **Physical Examination:**\\n    * A doctor or dermatologist will carefully examine the skin growth, assessing its size, shape, color, texture, and any signs of inflammation, pain, or bleeding. They'll also check for any other suspicious growths or lesions on the skin.\\n\\n2. **Medical History:**\\n    * The doctor will ask about your symptoms, including when the growth appeared, how it's changed over time, and any other relevant factors like sun exposure, family history of skin cancer, or any recent changes in your medications or health.\\n\\n3. **Imaging Tests:**\\n    * Depending on the suspected cause, imaging tests may be used to visualize the growth and surrounding tissues. These might include:\\n        * **Dermoscopy:** A handheld device that uses magnified lighting to examine the skin growth in detail.\\n        * **Biopsy:** A small sample of tissue is taken from the growth and examined under a microscope. This is the gold standard for diagnosing skin cancer and other conditions.\\n\\n4. **Other Tests:**\\n    * Depending on the suspected cause, additional tests may be needed, such as:\\n        * **Blood tests:** To check for underlying conditions that can affect the skin.\\n\\n**Important Note:**  Skin growths can have a wide range of causes, some serious. It's essential to see a doctor for proper diagnosis and treatment, as some growths may require immediate attention.\"]",
+              "question": "My daughter has just returned from America and has some sort of bite I think on her breast. It is very red and swollen and over a large area.Doctor the image for that is attached  below  It is very painful and shows signs of black in the middle.MIT has also started to peel. She feels very tired and heavy eyed. What could this be and should she see a doctor or go to a & e",
+              "question_summ": "What could be the cause of the red, swollen bite with black in the middle, along with fatigue and droopy eyes? Should she seek medical attention?",
+              "retrieval_score": 0.0036067888140678406,
+              "kb_index": 1576,
+              "clinical_relevance": 0.4,
+              "combined_score": 0.16216407328844074
+            }
+          ]
+        }
+      }
+    }
+  },
+  "generation": {
+    "answer": "The image shows skin abnormalities, also known as lesions or skin growths [Source 1, 2, 3, 4]. These are visible abnormalities that differ in color, texture, or shape from the surrounding skin [Source 1, 2, 3, 4]. Skin growths can be benign or malignant [Source 1, 2, 3, 4]. They can be flat or raised, smooth or rough, and caused by factors such as sun exposure, genetics, and viruses [Source 1, 2, 3, 4].\n\nConfidence: 1.0\nReasoning: The provided evidence clearly defines skin growths and their characteristics, which are visually represented in the image.",
+    "confidence": 1.0,
+    "provenance": [],
+    "raw_answer": "The image shows skin abnormalities, also known as lesions or skin growths [Source 1, 2, 3, 4]. These are visible abnormalities that differ in color, texture, or shape from the surrounding skin [Source 1, 2, 3, 4]. Skin growths can be benign or malignant [Source 1, 2, 3, 4]. They can be flat or raised, smooth or rough, and caused by factors such as sun exposure, genetics, and viruses [Source 1, 2, 3, 4].\n\nConfidence: 1.0\nReasoning: The provided evidence clearly defines skin growths and their characteristics, which are visually represented in the image.",
+    "evidence_count": 4
+  }
+}

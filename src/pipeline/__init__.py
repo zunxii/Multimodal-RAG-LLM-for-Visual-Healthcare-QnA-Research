@@ -1,6 +1,5 @@
 """End-to-end pipeline"""
 
-from .rag_pipeline import RAGPipeline
-from .complete_rag_pipeline import CompleteRAGPipeline
+from .hypothesis_rag_pipeline import HypothesisRAGPipeline
 
-__all__ = ['RAGPipeline', 'CompleteRAGPipeline']
+__all__ = ['HypothesisRAGPipeline']
